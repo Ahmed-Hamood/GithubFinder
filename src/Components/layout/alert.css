@@ -1,0 +1,11 @@
+.alert-container{
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e74c3c;
+  margin-bottom: 10px;
+}
+
+.alert-message{
+  color: #e74c3c;
+  font-weight: bold;
+}

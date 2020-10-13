@@ -1,0 +1,349 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Scroll bar style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(221, 220, 220);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e74c3c;
+  border: 1px solid rgb(183, 183, 183);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2108;
+}
+
+/* ################### Users Container ################### */
+
+.users-container {
+  width: 95%;
+  max-width: 984px;
+  padding: 12px;
+  padding-top: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+/* ################### User Item Style ################### */
+
+.user-item-card {
+  background: #353b48;
+  color: #f5f6fa;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.6s background, 0.2s box-shadow, 0.3s border-radius;
+}
+
+.user-item-card:hover {
+  background: #191b1f;
+  box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+}
+
+.user-item-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 360px;
+}
+
+.username {
+  font-family: Helvetica;
+}
+
+.user-link {
+  color: #f5f6fa;
+  text-align: center;
+  font-weight: bold;
+  background: #c23616;
+  padding: 10px 33px;
+  width: 200px;
+  border-radius: 5px;
+  transition: 0.3s background;
+}
+
+.user-link:hover {
+  background: #385eaf;
+}
+
+@media (max-width: 1052px) {
+  .user-item-card {
+    width: 47%;
+  }
+}
+@media (max-width: 741px) {
+  .users-content {
+    flex-direction: column;
+  }
+  .user-item-card {
+    width: 100%;
+  }
+  .user-link {
+    width: 300px;
+  }
+}
+
+/* ################################################################ */
+/* ################################################################ */
+/* ################################################################ */
+/* ################### Single User Profile ################### */
+
+.profile-container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 3px;
+}
+
+.profile-title {
+  font-family: 'Bahnschrift';
+  color: #e74c3c;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.profile-title::after {
+  content: "";
+  display: block;
+  margin: 30px auto;
+}
+
+.backbtn{
+  position: relative;
+  top: -30px;
+  color: #e74c3c;
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid #e74c3c;
+  border-radius: 3px;
+  padding: 8px 33px;
+  transition: 0.2s all;
+}
+
+.backbtn:hover{
+  background:  #e74c3c;
+  color: #ffffff;
+}
+
+
+
+.user-img-info-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+}
+
+/* User Image, name and link ti his github profile */
+
+.user-image-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-image-name img {
+  width: 200px;
+  height: 200px;
+  border-radius: 360px;
+}
+
+.user-image-name h2 {
+  font-family: 'Arial';
+  margin-top: 18px;
+}
+
+.visit-btn{
+  color: white;
+  margin-top: 22px;
+  font-weight: bold;
+  background: #e74c3c;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: 0.3s all;
+}
+
+.visit-btn:hover{
+  background: #8a2e24;
+}
+/* ########################################## */
+
+/* User info Username, company, website, email, createdAt and Bio */
+
+.user-info{
+  padding: 12px;
+  border-radius: 8px;
+  line-height: 1.8;
+  margin-top: 22px;
+}
+
+.user-info > p{
+  color: #353b48;
+  font-family: 'Bahnschrift';
+  font-size: 1.1rem;
+   border-bottom: 1px solid #dcdde1;
+  line-height: 2.5;
+}
+
+.bold{
+  font-weight: bold;
+}
+/* bio content */
+
+.bio-content h3{
+  line-height: 1.8;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.bio-content h3::after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  height: 0px;
+  border-bottom: 1px solid #e74d3c7d;
+}
+
+.bio-content p {
+  font-size: 1.0rem;
+   line-height: 1.5;
+  text-align: center;
+  font-family: 'Bahnschrift';
+  margin-top: 8px;
+}
+
+/* user achievement content */
+
+.user-achievement-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+
+.achievement-content{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  font-family: 'Arial';
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  line-height:1.2;
+  color: white;
+  border-radius: 6px;
+  width: 20%;
+  height: 150px;
+  text-align: center;
+  padding: 12px;
+  transition: 0.2s all;
+}
+
+.achievement-content:hover{
+  box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.achievement-content h3{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.achievement-content p{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.red{
+  background: #e74c3c;
+}
+.green{
+  background: #27ae60;
+}
+.black{
+  background: #34495e;
+}
+
+
+/* ##################################################### */
+/* Repos User Styling */
+.repos-content{
+ margin-top: 50px;
+}
+.repos{
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: block;
+  color: white;
+  padding: 12px 22px;
+  background:  #e74c3c;
+  margin: 10px 0;
+  transition: 0.3s all;
+}
+
+.repos:hover{
+  background:  #b73425;
+  margin-left: 5px;
+}
+
+
+/* ####################################################
+####################################################
+############# Mobile Version ################
+####################################################
+#################################################### */
+
+@media (max-width: 1000px) {
+  html,body{
+    font-size: 15px;
+  }
+  .user-img-info-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .user-achievement-content{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-content: center;
+    justify-content: center;
+  }
+  .achievement-content{
+    width: 47%;
+    height: 140px;
+  }
+  .repos{
+    font-size: 1.0rem;
+  }
+}
+
+
