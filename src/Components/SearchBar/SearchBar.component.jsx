@@ -8,14 +8,14 @@ class SearchBar extends Component {
   SearchSubmit = (e) => {
     // 1. prevent form default action
     e.preventDefault();
-    // 2. check if the input is Empty
+    // 2A. check if the input is Empty
     if (this.state.InputSearchValue.trim().length) {
       // 3. Execute SearchForUsers thru props to run App - async SearchForUsers(passing InputValue)
       this.props.SearchForUsers(this.state.InputSearchValue)
       // 4. Reset InputValue = ""
       this.setState({ InputSearchValue: '' });
     } else {
-      //
+      // 2B. Invoke alert method if the input is Empty
       this.props.alert(' - Please Enter Something')
     }
   };
