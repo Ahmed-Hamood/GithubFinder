@@ -20,7 +20,7 @@ class SearchBar extends Component {
 
   render() {
 
-    const { clearBtnStatus, clearUsers} = this.props;
+    const { clearBtnStatus, clearUsers } = this.props;
     return (
       <div className="SearchBar-container fade">
         {this.props.children}
@@ -34,8 +34,8 @@ class SearchBar extends Component {
             maxLength="25"
           />
           <button className="searchBtn"> SEARCH </button>
-          {clearBtnStatus && <button className="clearBtn" type="button" onClick={clearUsers}> Clear </button> }
-         
+          {clearBtnStatus && <button className="clearBtn" type="button" onClick={clearUsers}> Clear </button>}
+
         </form>
       </div>
     );
