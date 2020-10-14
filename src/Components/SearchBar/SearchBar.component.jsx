@@ -4,11 +4,13 @@ import './SearchBar.css';
 class SearchBar extends Component {
   state = { InputSearchValue: '' };
 
-
+  // here we get SearchForUsers props and pass userInput to it 
   SearchSubmit = (e) => {
+    // 1. prevent form default action
     e.preventDefault();
-
+    // 2. check if the input is Empty
     if (this.state.InputSearchValue.trim().length) {
+      // 3. Execute SearchForUsers thru props to run App - async SearchForUsers(passing InputValue)
       this.props.SearchForUsers(this.state.InputSearchValue)
       this.setState({ InputSearchValue: '' });
     } else {
