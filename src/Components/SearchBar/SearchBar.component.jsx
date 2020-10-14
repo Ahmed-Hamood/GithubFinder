@@ -12,8 +12,10 @@ class SearchBar extends Component {
     if (this.state.InputSearchValue.trim().length) {
       // 3. Execute SearchForUsers thru props to run App - async SearchForUsers(passing InputValue)
       this.props.SearchForUsers(this.state.InputSearchValue)
+      // 4. Reset InputValue = ""
       this.setState({ InputSearchValue: '' });
     } else {
+      //
       this.props.alert(' - Please Enter Something')
     }
   };
