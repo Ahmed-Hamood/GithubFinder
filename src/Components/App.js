@@ -40,7 +40,7 @@ class App extends Component {
     }
   };
 
-  // Get A single User from GitHub API
+  // Get A single User from GitHub API .
   SearchForSingleUser = async (username) => {
     // 1. Reset all state data
     this.setState({ isLoading: true });
